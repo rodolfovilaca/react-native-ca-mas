@@ -39,7 +39,7 @@ RCT_EXPORT_METHOD(getState:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseR
     resolve(@(currentState));
 }
 
-RCT_EXPORT_METHOD(setGrantFlow:(MASGrantFlow)constant)
+RCT_EXPORT_METHOD(setGrantFlow:(int)constant)
 {
     [MAS setGrantFlow:constant];
 }
