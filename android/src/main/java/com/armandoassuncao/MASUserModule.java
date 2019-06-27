@@ -29,9 +29,10 @@ public class MASUserModule extends ReactContextBaseJavaModule {
         return "CaMASUser";
     }
 
+    @Deprecated
     @ReactMethod
     public void getAuthCredentialsType(final Promise promise) {
-        promise.resolve(MASUser.getAuthCredentialsType());
+        promise.reject(new Throwable("Method Deprecated"));
     }
 
     @ReactMethod

@@ -4,6 +4,7 @@ declare module 'react-native-ca-mas' {
         getState: () => PromiseLike<number>
         invoke: <B, O>(path: string, options: IInvokeOptions<O>) => Promise<IInvokeResponse<B>>
         isAuthenticationListenerRegistered: () => PromiseLike<boolean>
+        setGrantFlow: (constant: MASConstant) => void
     }
 
     export interface IMASDevice {
@@ -36,4 +37,14 @@ declare module 'react-native-ca-mas' {
     export var MAS: IMAS
     export var MASDevice: IMASDevice
     export var MASUser: IMASUser
+    export type MASConstant = {
+        MAS_GRANT_FLOW_PASSWORD: 2,
+        MAS_GRANT_FLOW_CLIENT_CREDENTIALS: 1,
+        MAS_USER: 1,
+        MAS_APPLICATION: 2,
+        MAS_STATE_NOT_CONFIGURED: 1,
+        MAS_STATE_NOT_INITIALIZED: 2,
+        MAS_STATE_STARTED: 3,
+        MAS_STATE_STOPPED: 4,
+    }
 }

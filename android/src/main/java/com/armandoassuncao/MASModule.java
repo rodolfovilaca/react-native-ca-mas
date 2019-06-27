@@ -5,6 +5,7 @@ import android.net.Uri;
 import com.ca.mas.core.error.TargetApiException;
 import com.ca.mas.foundation.MAS;
 import com.ca.mas.foundation.MASCallback;
+import com.ca.mas.foundation.MASConstants;
 import com.ca.mas.foundation.MASRequest;
 import com.ca.mas.foundation.MASRequest.MASRequestBuilder;
 import com.ca.mas.foundation.MASRequestBody;
@@ -53,6 +54,11 @@ public class MASModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void isAuthenticationListenerRegistered(final Promise promise) {
         promise.resolve(MAS.isAuthenticationListenerRegistered());
+    }
+
+    @ReactMethod
+    public void setGrantFlow(int constant) {
+        MAS.setGrantFlow(constant);
     }
 
     @ReactMethod

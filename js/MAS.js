@@ -12,6 +12,10 @@ CaMAS.getState = () => {
     return RNCaMAS.getState();
 }
 
+CaMAS.setGrantFlow = (CONSTANT) => {
+    return RNCaMAS.setGrantFlow(CONSTANT);
+}
+
 CaMAS.isAuthenticationListenerRegistered = () => {
     return RNCaMAS.isAuthenticationListenerRegistered();
 }

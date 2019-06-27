@@ -39,6 +39,11 @@ RCT_EXPORT_METHOD(getState:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseR
     resolve(@(currentState));
 }
 
+RCT_EXPORT_METHOD(setGrantFlow:(MASGrantFlow)constant)
+{
+    [MAS setGrantFlow:constant];
+}
+
 RCT_EXPORT_METHOD(isAuthenticationListenerRegistered:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     // TODO: to implement
