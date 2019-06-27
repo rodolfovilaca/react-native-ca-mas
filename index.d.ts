@@ -19,6 +19,7 @@ declare module 'react-native-ca-mas' {
         getCurrentUser: () => PromiseLike<any>
         login: (username: string, password: string) => Promise<boolean>
         logout: () => Promise<boolean>
+        getCurrentUserInfo: () => PromiseLike<any>
     }
 
     export interface IInvokeOptions<B = any> {
@@ -34,10 +35,7 @@ declare module 'react-native-ca-mas' {
         statusCode?: number
     }
 
-    export var MAS: IMAS
-    export var MASDevice: IMASDevice
-    export var MASUser: IMASUser
-    export type MASConstant = {
+    export type MASConstants = {
         MAS_GRANT_FLOW_PASSWORD: 2,
         MAS_GRANT_FLOW_CLIENT_CREDENTIALS: 1,
         MAS_USER: 1,
@@ -47,4 +45,9 @@ declare module 'react-native-ca-mas' {
         MAS_STATE_STARTED: 3,
         MAS_STATE_STOPPED: 4,
     }
+
+    export var MAS: IMAS
+    export var MASDevice: IMASDevice
+    export var MASUser: IMASUser
+    export var MASConstants: MASConstants
 }

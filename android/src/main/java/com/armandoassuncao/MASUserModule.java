@@ -51,6 +51,21 @@ public class MASUserModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void getCurrentUserInfo(final Promise promise) {
+        MASUser user = MASUser.getCurrentUser();
+        if (user == null) {
+            promise.resolve(null);
+        } else {
+            try {
+                WritableMap map = Utils.convertJsonToWritableMap(user.getAsJSONObject());
+                promise.resolve(map);
+            } catch (JSONException e) {
+                promise.reject(E_GET_USER_ERROR, e);
+            }
+        }
+    }
+
+    @ReactMethod
     public void login(final String username, final String password, final Promise promise) {
         MASUser.login(username, password.toCharArray(), new MASCallback<MASUser>() {
             @Override
