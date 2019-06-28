@@ -35,7 +35,8 @@ RCT_EXPORT_METHOD(getCurrentUserInfo
                   :(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject
                   ) {
-    resolve([[MASUser currentUser] _attributes]);
+    NSDictionary *dict = [[MASUser currentUser] _attributes];
+    resolve([dict valueForKey:@"MASResponseInfoBodyInfoKey"]);
 }
 
 RCT_EXPORT_METHOD(login
