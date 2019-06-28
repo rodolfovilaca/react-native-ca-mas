@@ -21,7 +21,7 @@ RCT_EXPORT_METHOD(getAuthCredentialsType
     :(RCTPromiseResolveBlock)resolve
     rejecter:(RCTPromiseRejectBlock)reject
 ) {
-    resolve([MASUser authCredentialsType]);
+    // resolve([MASUser authCredentialsType]);
 }
 
 RCT_EXPORT_METHOD(getCurrentUser
