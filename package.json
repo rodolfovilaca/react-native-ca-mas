@@ -1,6 +1,6 @@
 {
     "name": "react-native-ca-mas",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "CA MAS SDK for React-Native",
     "main": "index.js",
     "scripts": {
@@ -10,10 +10,10 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git://github.com/ArmandoAssuncao/react-native-ca-mas.git"
+        "url": "git://github.com/rodolfovilaca/react-native-ca-mas.git"
     },
     "bugs": {
-        "url": "https://github.com/ArmandoAssuncao/react-native-ca-mas/issues"
+        "url": "https://github.com/rodolfovilaca/react-native-ca-mas/issues"
     },
     "keywords": [
         "android",
