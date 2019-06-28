@@ -31,6 +31,13 @@ RCT_EXPORT_METHOD(getCurrentUser
     resolve([[MASUser currentUser] getDictionary]);
 }
 
+RCT_EXPORT_METHOD(getCurrentUserInfo
+                  :(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+                  ) {
+    resolve([[MASUser currentUser] _attributes]);
+}
+
 RCT_EXPORT_METHOD(login
     :(NSString *)username
     password:(NSString *)password

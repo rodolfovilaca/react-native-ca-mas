@@ -29,13 +29,29 @@ public class MASUserModule extends ReactContextBaseJavaModule {
         return "CaMASUser";
     }
 
+    @Deprecated
     @ReactMethod
     public void getAuthCredentialsType(final Promise promise) {
-        promise.resolve(MASUser.getAuthCredentialsType());
+        promise.reject(new Throwable("Method Deprecated"));
     }
 
     @ReactMethod
     public void getCurrentUser(final Promise promise) {
+        MASUser user = MASUser.getCurrentUser();
+        if (user == null) {
+            promise.resolve(null);
+        } else {
+            try {
+                WritableMap map = Utils.convertJsonToWritableMap(user.getAsJSONObject());
+                promise.resolve(map);
+            } catch (JSONException e) {
+                promise.reject(E_GET_USER_ERROR, e);
+            }
+        }
+    }
+
+    @ReactMethod
+    public void getCurrentUserInfo(final Promise promise) {
         MASUser user = MASUser.getCurrentUser();
         if (user == null) {
             promise.resolve(null);

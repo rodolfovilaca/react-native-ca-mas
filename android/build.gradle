@@ -1,10 +1,12 @@
 buildscript {
     repositories {
         jcenter()
+        google()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
@@ -30,11 +32,15 @@ android {
     }
 }
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile 'com.ca:mas:1.6.00'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.ca:mas-foundation:1.9.10'
 }

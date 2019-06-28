@@ -12,6 +12,10 @@ CaMASUser.getCurrentUser = () => {
     return RNCaMASUser.getCurrentUser();
 }
 
+CaMASUser.getCurrentUserInfo = () => {
+    return RNCaMASUser.getCurrentUserInfo();
+}
+
 CaMASUser.login = (username, password) => {
     return RNCaMASUser.login(username, password);
 }
