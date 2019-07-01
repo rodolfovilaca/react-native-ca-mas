@@ -83,13 +83,13 @@ public class MASUserModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void logout(final Promise promise) {
+    public void logout(boolean force, final Promise promise) {
         if (MASUser.getCurrentUser() == null) {
             promise.resolve(true);
             return;
         }
 
-        MASUser.getCurrentUser().logout(new MASCallback<Void>() {
+        MASUser.getCurrentUser().logout(force, new MASCallback<Void>() {
             @Override
             public void onSuccess(Void object) {
                 promise.resolve(true);

@@ -18,7 +18,7 @@ declare module 'react-native-ca-mas' {
         getAuthCredentialsType: () => PromiseLike<string>
         getCurrentUser: () => PromiseLike<any>
         login: (username: string, password: string) => Promise<boolean>
-        logout: () => Promise<boolean>
+        logout: (force: boolean) => Promise<boolean>
         getCurrentUserInfo: () => PromiseLike<any>
     }
 
