@@ -56,7 +56,7 @@ RCT_EXPORT_METHOD(login
     }];
 }
 
-RCT_EXPORT_METHOD(logout: (BOOL):completed resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(logout: (BOOL)completed resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [[MASUser currentUser] logout:NO completion:^(BOOL completed, NSError *error) {
         if (error) {
             reject(E_LOGOUT_ERROR, error.localizedDescription, error);
