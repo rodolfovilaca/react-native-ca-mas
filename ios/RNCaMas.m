@@ -2,9 +2,9 @@
 #import <React/RCTLog.h>
 
 #import <MASFoundation/MASFoundation.h>
-#import <MASConnecta/MASConnecta.h>
-#import <MASIdentityManagement/MASIdentityManagement.h>
-#import <MASStorage/MASStorage.h>
+// #import <MASConnecta/MASConnecta.h>
+// #import <MASIdentityManagement/MASIdentityManagement.h>
+// #import <MASStorage/MASStorage.h>
 
 @implementation RNCaMas
 
